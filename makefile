@@ -1,4 +1,8 @@
 COMPILER = gcc
 CFLAGS = -ansi -Wall -Werror -pedantic
-compile_string:
-	{COMPILER} {CFLAGS} -c lyw_string lyw_string.c
+play: lyw_game lyw_coin.o
+	.\lyw_game.exe
+lyw_game: lyw_game.c lyw_coin.o
+	{COMPILER} {CFLAGS} -o $@ $^
+lyw_coin.o: lyw.c lyw.h
+	{COMPILER} {CFLAGS} -c $<
