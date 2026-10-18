@@ -13,8 +13,8 @@
 #define Lyw_replacement_game_name "Lettus yeetus wheatus"
 #define Lyw_game_name Lyw_replacement_game_name
 #define Lyw_version 0
-#define Lyw_update 0
-#define Lyw_build 20261017UL
+#define Lyw_update 1
+#define Lyw_build 20261018UL
 #define Lyw_stdin stdin
 #define Lyw_stdout stdout
 #define Lyw_stderr stderr
