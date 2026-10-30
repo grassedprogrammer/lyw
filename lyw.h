@@ -20,6 +20,7 @@
 #define Lyw_stderr stderr
 #define Lyw_stdstrsize 32
 #define Lyw_stdnamesize Lyw_stdstrsize
+#define Lyw_entity_free_id_arena_size UCHAR_MAX+1
 #define Lyw_long_NAN LONG_MIN
 #define Lyw_entity_type_undefined ULONG_MAX
 #define Lyw_entity_type_unknown (ULONG_MAX-1)
@@ -39,6 +40,8 @@ struct lyw_entity{
 /*functions and macro functions*/
 void lyw_make_position_undefined(struct lyw_position* pos);
 lyw_bool lyw_is_position_undefined(struct lyw_position pos);
+/*int lyw_init_entity_id(void);*/
+lyw_id_t lyw_give_id();
 struct lyw_entity lyw_new_entity(char* name, struct lyw_position pos, lyw_id_t type);
 struct lyw_entity* lyw_assign_new_entity(char* name, struct lyw_position pos, lyw_id_t type, struct lyw_entity* entity);
 void lyw_free_entity(struct lyw_entity* entity);

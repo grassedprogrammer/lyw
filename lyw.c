@@ -1,7 +1,22 @@
 #include "lyw.h"
 #include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 static lyw_id_t lyw_global_entity_count = 1;
+static lyw_id_t lyw_global_free_id = NULL;
+/*
+int lyw_init_entity_id(void){
+ free(lyw_global_free_entity_id);
+ lyw_global_free_entity_id = calloc(Lyw_entity_free_id_arena_size,
+  sizeof(lyw_id_t));
+ if(lyw_global_free_entity_id == NULL){
+  fprintf(Lyw_stderr, "\nfatal: Unable to allocate entity id arena\n");
+  return Lyw_false;
+ }
+}*/
+lyw_id_t lyw_give_id(){
+ lyw_globa
+}
 struct lyw_entity lyw_new_entity(char* name, struct lyw_position pos, lyw_id_t type){
  struct lyw_entity entity;
  entity.id = lyw_global_entity_count;
